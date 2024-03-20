@@ -1,7 +1,11 @@
+import { useState } from "react";
 import NavLink from "../NavLink/NavLink";
 import { CgMenuGridR } from "react-icons/cg";
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false)
+
     const routes = [
         { id: 1, path: '/', name: 'Home' },
         { id: 2, path: '/about', name: 'About Us' },
@@ -11,7 +15,12 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            <CgMenuGridR className="text-3xl lg:hidden md:hidden"></CgMenuGridR>
+            <div className="lg:hidden md:hidden" onClick={() => setOpen(!open)}>
+                {
+                    open === true ? 'oopen' : 'close'
+                }
+                <CgMenuGridR className="text-3xl "></CgMenuGridR>
+            </div>
             <ul className="md:flex gap-10 mb-10">
                 {
                     routes.map(route => <NavLink key={route.id} route={route}></NavLink>)
