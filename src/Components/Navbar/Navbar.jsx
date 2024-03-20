@@ -10,9 +10,11 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            {
-                routes.map(route => <li key={route.id}><a href={`route.path`}>{route.name}</a></li>)
-            }
+            <ul>
+                {
+                    routes.map(route => <li key={route.id}><a href={route.path}>{route.name}</a></li>)
+                }
+            </ul>
 
         </nav>
     );
