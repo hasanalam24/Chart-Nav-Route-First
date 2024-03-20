@@ -25,8 +25,8 @@ const Navbar = () => {
                 }
 
             </div>
-            <ul className={`md:flex gap-10 mb-10 absolute bg-yellow-200 text-black px-4 shadow-lg
-            ${open ? '' : 'hidden'}
+            <ul className={`md:flex duration-1000 gap-10 mb-10 absolute bg-yellow-200 text-black px-4 shadow-lg
+            ${open ? 'top-16' : '-top-60'}
 
             `}>
 
