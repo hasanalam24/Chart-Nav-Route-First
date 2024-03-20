@@ -1,3 +1,4 @@
+import NavLink from "../NavLink/NavLink";
 
 
 const Navbar = () => {
@@ -10,9 +11,9 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            <ul>
+            <ul className="flex gap-10 mb-10">
                 {
-                    routes.map(route => <li key={route.id}><a href={route.path}>{route.name}</a></li>)
+                    routes.map(route => <NavLink key={route.id} route={route}></NavLink>)
                 }
             </ul>
 
