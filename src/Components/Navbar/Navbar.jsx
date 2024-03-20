@@ -16,7 +16,7 @@ const Navbar = () => {
         { id: 5, path: '/blog', name: 'Blog' }
     ];
     return (
-        <nav>
+        <nav className="bg-yellow-200 p-4">
             <div className="lg:hidden md:hidden" onClick={() => setOpen(!open)}>
                 {
                     open === true ?
@@ -25,7 +25,11 @@ const Navbar = () => {
                 }
 
             </div>
-            <ul className="md:flex gap-10 mb-10">
+            <ul className={`md:flex gap-10 mb-10 absolute bg-yellow-200 text-black px-4 shadow-lg
+            ${open ? '' : 'hidden'}
+
+            `}>
+
                 {
                     routes.map(route => <NavLink key={route.id} route={route}></NavLink>)
                 }
