@@ -1,5 +1,5 @@
 import NavLink from "../NavLink/NavLink";
-
+import { CgMenuGridR } from "react-icons/cg";
 
 const Navbar = () => {
     const routes = [
@@ -11,7 +11,8 @@ const Navbar = () => {
     ];
     return (
         <nav>
-            <ul className="flex gap-10 mb-10">
+            <CgMenuGridR className="text-3xl lg:hidden md:hidden"></CgMenuGridR>
+            <ul className="md:flex gap-10 mb-10">
                 {
                     routes.map(route => <NavLink key={route.id} route={route}></NavLink>)
                 }

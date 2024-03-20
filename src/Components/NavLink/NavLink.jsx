@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const NavLink = ({ route }) => {
 
@@ -11,4 +11,7 @@ const NavLink = ({ route }) => {
     );
 };
 
+NavLink.propTypes = {
+    route: PropTypes.object
+}
 export default NavLink;
