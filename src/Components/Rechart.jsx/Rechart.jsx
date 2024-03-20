@@ -27,6 +27,18 @@ const Rechart = () => {
         {
             name: 'Page F',
             marks: 88,
+        },
+        {
+            name: 'Page G',
+            marks: 45,
+        },
+        {
+            name: 'Page H',
+            marks: 12,
+        },
+        {
+            name: 'Page I',
+            marks: 67,
         }
     ]
     return (
