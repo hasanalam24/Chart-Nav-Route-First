@@ -1,6 +1,8 @@
 import { useState } from "react";
 import NavLink from "../NavLink/NavLink";
 import { CgMenuGridR } from "react-icons/cg";
+import { AiFillCloseCircle } from "react-icons/ai";
+
 
 const Navbar = () => {
 
@@ -17,9 +19,11 @@ const Navbar = () => {
         <nav>
             <div className="lg:hidden md:hidden" onClick={() => setOpen(!open)}>
                 {
-                    open === true ? 'oopen' : 'close'
+                    open === true ?
+                        <AiFillCloseCircle className="text-3xl"></AiFillCloseCircle>
+                        : <CgMenuGridR className="text-3xl "></CgMenuGridR>
                 }
-                <CgMenuGridR className="text-3xl "></CgMenuGridR>
+
             </div>
             <ul className="md:flex gap-10 mb-10">
                 {
